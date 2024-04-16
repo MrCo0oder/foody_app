@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foody_app/presentation/resources/color_manager.dart';
+import 'package:foody_app/presentation/utils/color_manager.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});

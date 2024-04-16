@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foody_app/presentation/resources/styles_manager.dart';
-import 'package:foody_app/presentation/resources/values_manager.dart';
+import 'package:foody_app/presentation/utils/styles_manager.dart';
+import 'package:foody_app/presentation/utils/values_manager.dart';
 
 import 'color_manager.dart';
 import 'font_manager.dart';
@@ -33,7 +33,9 @@ ThemeData getApplicationTheme() {
         disabledColor: ColorManager.grey1,
         buttonColor: ColorManager.primary,
         splashColor: ColorManager.lightPrimary),
-
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(textStyle: getRegularStyle(color: ColorManager.primary),foregroundColor: ColorManager.lightPrimary)
+    ),
     // elevated button them
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -44,14 +46,13 @@ ThemeData getApplicationTheme() {
 
     // text theme
     textTheme: TextTheme(
-        displayLarge:
-            getLightStyle(color: ColorManager.white, fontSize: FontSize.s22),
-        displayMedium: getSemiBoldStyle(
-            color: ColorManager.darkGrey, fontSize: FontSize.s16),
+        displayLarge: getSemiBoldStyle(color: ColorManager.darkGrey, fontSize: FontSize.s16),
+        headlineLarge: getSemiBoldStyle(color: ColorManager.darkGrey, fontSize: FontSize.s16),
+        headlineMedium: getRegularStyle(color: ColorManager.darkGrey, fontSize: FontSize.s14),
         titleMedium: getMediumStyle(
             color: ColorManager.lightGrey, fontSize: FontSize.s14),
-        bodySmall: getRegularStyle(color: ColorManager.grey1),
-        bodyLarge: getRegularStyle(color: ColorManager.grey)),
+        bodyLarge  : getRegularStyle(color: ColorManager.grey1),
+      bodySmall : getRegularStyle(color: ColorManager.grey)),
     // input decoration theme (text form field)
     inputDecorationTheme: InputDecorationTheme(
         // content padding

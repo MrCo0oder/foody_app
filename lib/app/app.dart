@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:foody_app/presentation/resources/routes_manager.dart';
-import 'package:foody_app/presentation/splash/splash_view.dart';
+import 'package:foody_app/presentation/utils/routes_manager.dart';
 
-import '../presentation/resources/theme_manager.dart';
+import '../presentation/utils/theme_manager.dart';
 
 class MyApp extends StatefulWidget {
   // named constructor
