@@ -90,6 +90,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                 ),
               ),
             ),
+            if(data !=null)
             _getBottomSheetWidget(data)
           ],
         ),
